@@ -15,15 +15,21 @@ struct ContentView: View {
             VStack {
                 SunView()
                     .frame(width: 300, height: 300)
-                WaveView()
-                    .frame(width: UIScreen.main.bounds.width, height: 300)
+                ForestView()
+                    .frame(width: 300, height: 300)
                     .padding(.bottom, -10)
                 Rectangle()
-                    .foregroundColor(Color(red: 0.98, green: 0.91, blue: 0.71))
+                    .foregroundColor(.green)
+                    .padding(.bottom, -220)
                     .ignoresSafeArea()
+                HouseView()
+                    .frame(width: 300, height: 300)
+                    .padding(.top, -100)
+
+
             }
             
-//                WaveView()
+//                ForestView()
 //                Rectangle()
 //                    .fill(.blue)
         }
