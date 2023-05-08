@@ -12,9 +12,13 @@ struct ContentView: View {
         ZStack {
             Color(red: 0.5, green: 0.78, blue: 1)
                 .ignoresSafeArea()
+//            Color(red: 0.059, green: 0.322, blue: 0.793)
+//                .ignoresSafeArea()
             VStack {
                 SunView()
                     .frame(width: 300, height: 300)
+//                MoonView()
+//                    .frame(width: 300, height: 300)
                 ForestView()
                     .frame(width: 300, height: 300)
                     .padding(.bottom, -10)

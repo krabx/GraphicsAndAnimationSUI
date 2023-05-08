@@ -14,6 +14,7 @@
 		6EB9D2EE2A0910C700A4AB5D /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9D2ED2A0910C700A4AB5D /* SunView.swift */; };
 		6EB9D2F02A091D6400A4AB5D /* ForestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9D2EF2A091D6400A4AB5D /* ForestView.swift */; };
 		6EB9D2F22A09895400A4AB5D /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9D2F12A09895400A4AB5D /* HouseView.swift */; };
+		6EB9D2F42A0999E000A4AB5D /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9D2F32A0999E000A4AB5D /* MoonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		6EB9D2ED2A0910C700A4AB5D /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
 		6EB9D2EF2A091D6400A4AB5D /* ForestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestView.swift; sourceTree = "<group>"; };
 		6EB9D2F12A09895400A4AB5D /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
+		6EB9D2F32A0999E000A4AB5D /* MoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				6EB9D2ED2A0910C700A4AB5D /* SunView.swift */,
 				6EB9D2EF2A091D6400A4AB5D /* ForestView.swift */,
 				6EB9D2F12A09895400A4AB5D /* HouseView.swift */,
+				6EB9D2F32A0999E000A4AB5D /* MoonView.swift */,
 			);
 			path = GraphicsAndAnimationSUI;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				6EB9D2E22A09109D00A4AB5D /* ContentView.swift in Sources */,
 				6EB9D2E02A09109D00A4AB5D /* GraphicsAndAnimationSUIApp.swift in Sources */,
 				6EB9D2EE2A0910C700A4AB5D /* SunView.swift in Sources */,
+				6EB9D2F42A0999E000A4AB5D /* MoonView.swift in Sources */,
 				6EB9D2F22A09895400A4AB5D /* HouseView.swift in Sources */,
 				6EB9D2F02A091D6400A4AB5D /* ForestView.swift in Sources */,
 			);
