@@ -8,34 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isAnimated = false
+    
+    private let colorDay = CGColor(red: 0.5, green: 0.78, blue: 1, alpha: 1)
+    private let colorNight = CGColor(red: 0.059, green: 0.322, blue: 0.793, alpha: 1)
+    
     var body: some View {
         ZStack {
-            Color(red: 0.5, green: 0.78, blue: 1)
+            Color(!isAnimated ? colorDay : colorNight)
                 .ignoresSafeArea()
-//            Color(red: 0.059, green: 0.322, blue: 0.793)
-//                .ignoresSafeArea()
             VStack {
+                Button("Click me", action: { buttonAction() })
+                    .font(.title)
                 SunView()
-                    .frame(width: 300, height: 300)
+                    .frame(width: 200, height: 200)
 //                MoonView()
 //                    .frame(width: 300, height: 300)
                 ForestView()
-                    .frame(width: 300, height: 300)
+                    .frame(width: 250, height: 250)
                     .padding(.bottom, -10)
                 Rectangle()
                     .foregroundColor(.green)
-                    .padding(.bottom, -220)
+                    .padding(.bottom, -250)
                     .ignoresSafeArea()
-                HouseView()
+                HouseView(isAnimated: isAnimated)
                     .frame(width: 300, height: 300)
                     .padding(.top, -100)
-
-
             }
-            
-//                ForestView()
-//                Rectangle()
-//                    .fill(.blue)
+        }
+    }
+    
+    private func buttonAction() {
+        withAnimation {
+            isAnimated.toggle()
         }
     }
 }

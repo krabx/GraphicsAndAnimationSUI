@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HouseView: View {
+    let isAnimated: Bool
+    
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width
@@ -38,8 +40,8 @@ struct HouseView: View {
                 path.addLine(to: CGPoint(x: middle + spacing, y: minimumSize * 0.7 + spacing))
                 path.closeSubpath()
             }
-//            .fill(.white)
-            .fill(.yellow)
+            .fill(isAnimated ? .yellow : .white)
+            
 
             
             Path { path in
@@ -63,7 +65,7 @@ struct HouseView: View {
 
 struct HouseView_Previews: PreviewProvider {
     static var previews: some View {
-        HouseView()
+        HouseView(isAnimated: false)
             .frame(width: 300, height: 300)
     }
 }
