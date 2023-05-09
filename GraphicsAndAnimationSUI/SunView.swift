@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SunView: View {
+//    let isAnimated: Bool
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width

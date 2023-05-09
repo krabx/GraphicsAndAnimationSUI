@@ -20,10 +20,18 @@ struct ContentView: View {
             VStack {
                 Button("Click me", action: { buttonAction() })
                     .font(.title)
-                SunView()
-                    .frame(width: 200, height: 200)
-//                MoonView()
-//                    .frame(width: 300, height: 300)
+                    .foregroundColor(!isAnimated ? .accentColor : .white)
+                if !isAnimated {
+                    SunView()
+                        .frame(width: 200, height: 200)
+//                        .animation(.default, value: 3)
+                        .transition(.leadingSlide)
+                } else {
+                    MoonView()
+                        .frame(width: 200, height: 200)
+                        .animation(.default, value: 3)
+                        .transition(.leadingSlide)
+                }
                 ForestView()
                     .frame(width: 250, height: 250)
                     .padding(.bottom, -10)
@@ -42,6 +50,16 @@ struct ContentView: View {
         withAnimation {
             isAnimated.toggle()
         }
+    }
+    
+}
+
+extension AnyTransition {
+    static var leadingSlide: AnyTransition {
+        let insertion = AnyTransition.move(edge: .leading)
+        let removal = AnyTransition.move(edge: .trailing)
+        
+        return .asymmetric(insertion: insertion, removal: removal)
     }
 }
 
